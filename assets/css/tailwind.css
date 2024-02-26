@@ -36,7 +36,27 @@
     @apply text-black;
   }
 }
+.nuxt-icon svg{
+  margin-bottom: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@keyframes moveControl {
+  0%{
+    transform: translateY(-2%);
+  }
+  50%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(-2%);
+  }
+}
+
+.control{
+  animation: moveControl 3s ease-in-out infinite;
+}
 html{
   scrollbar-width: thin;
-  scrollbar-color: #6200aa white ;
 }

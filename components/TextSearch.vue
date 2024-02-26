@@ -16,11 +16,10 @@ function onClick(){
 
 <template>
   <v-text-field
-    class="max-w-lg"
+    class="max-w-sm"
     :loading="loading"
     density="compact"
-    color="primary"
-    variant="solo"
+    variant="outlined"
     label="Buscar"
     append-inner-icon="mdi-magnify"
     single-line

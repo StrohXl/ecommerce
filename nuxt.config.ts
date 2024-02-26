@@ -13,15 +13,32 @@ export default defineNuxtConfig({
     },
     "@pinia/nuxt",
     "@nuxtjs/tailwindcss",
+    "vue-recaptcha/nuxt",
+    "nuxt-icon",
+    "nuxt-icons"
     //...
   ],
-
-  runtimeConfig: {
-    public:{
-      title: process.env.NUXT_TITLE_PAGE,
-      colorPrimary: process.env.NUXT_COLOR_PRIMARY
-    }
+  app: {
+    head: {
+      link: [
+        {
+          rel: "icon",
+          href: "/favicon.svg",
+        },
+      ],
+    },
   },
+  recaptcha: {
+    enterprise: true,
+    installPlugin: false,
+  },
+  runtimeConfig: {
+    public: {
+      title: process.env.NUXT_TITLE_PAGE,
+      colorPrimary: process.env.NUXT_PRIMARY_COLOR,
+    },
+  },
+
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config",

@@ -1,5 +1,5 @@
 <template>
-  <v-carousel color="primary" show-arrows="hover" cycle hide-delimiters="">
+  <v-carousel color="primary" show-arrows="hover" cycle>
     <v-carousel-item
       id="carousel-item"
       src="/lista-lanzamientos-moviles-2023.webp"
@@ -21,6 +21,6 @@
 </template>
 <style>
 #carousel-item {
-  @apply !max-w-[1200px] mx-auto !bg-gray-800;
+  @apply !max-w-[1200px] mx-auto ;
 }
 </style>

@@ -5,5 +5,5 @@ useHead({
 </script>
 
 <template>
-  <CarouselHero class="mb-10"/>
+  <PruebaImage/>
 </template>

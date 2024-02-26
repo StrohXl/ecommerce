@@ -7,12 +7,13 @@ const theme = useTheme();
   <v-theme-provider :theme="theme">
     <v-layout class="!grid">
       <AppBar />
-      <NavigationDrawer  />
-      <NavigationDrawerShoppingCart  />
+      <NavigationDrawer />
+      <NavigationDrawerShoppingCart />
       <div class="mt-[64px] md:mt-[108px]">
         <slot />
       </div>
       <NavigationFooter />
+
     </v-layout>
   </v-theme-provider>
 </template>
