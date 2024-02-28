@@ -4,7 +4,9 @@ const div1 = ref(true);
 const div2 = ref(false);
 const div3 = ref(false);
 const div4 = ref(false);
+let timeout: any;
 const mouseLeave = () => {
+  runInterval()
   div1.value = false;
   div2.value = false;
   div3.value = false;
@@ -23,6 +25,7 @@ const mouseLeave = () => {
   }
 };
 const mouseEnter = (position: number) => {
+  clearInterval(timeout);
   div1.value = false;
   div2.value = false;
   div3.value = false;
@@ -40,8 +43,8 @@ const mouseEnter = (position: number) => {
     div4.value = true;
   }
 };
-onMounted(() => {
-  setInterval(() => {
+const runInterval = () => {
+  timeout = setInterval(() => {
     num.value++;
     div1.value = false;
     div2.value = false;
@@ -63,6 +66,9 @@ onMounted(() => {
       div4.value = true;
     }
   }, 4000);
+};
+onMounted(() => {
+  runInterval();
 });
 </script>
 

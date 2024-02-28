@@ -12,7 +12,7 @@ import site from "@/site";
     <v-list>
       <v-list-item class="text-lg font-semibold">
         <v-btn
-        @click="useDrawerStore().closeDrawerShoppping()"
+          @click="useDrawerStore().closeDrawerShoppping()"
           variant="text"
           color="primary"
           icon="mdi-close"

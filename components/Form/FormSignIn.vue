@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import createCookie from "~/utils/createCookie";
-
 const email: Ref<string> = ref("");
 const password: Ref<string> = ref("");
 const loading = ref(false);
@@ -30,7 +28,7 @@ const validate = async () => {
         checkbox: checkbox.value,
       });
       loading.value = false;
-      createCookie();
+      createCookie()
     }, 2000);
   }
 };

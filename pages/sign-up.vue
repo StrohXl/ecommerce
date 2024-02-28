@@ -5,7 +5,7 @@
         class="!bg-gray-50 !shadow-md shadow-black border-1 mx-auto mb-5 !flex"
         size="70"
       >
-        <v-icon class="text-[#6200aa] !text-4xl">mdi-account</v-icon>
+        <v-icon class="text-primary !text-4xl">mdi-account</v-icon>
       </v-avatar>
       <h3 class="text-center mb-16 font-normal">Inscribirse</h3>
       <FormSignUp />

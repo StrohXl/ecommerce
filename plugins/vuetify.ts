@@ -9,7 +9,9 @@ export default defineNuxtPlugin((app) => {
     colors: {
       background: "#fefefe",
       surface: "#FFFFFF",
-      primary: "#6200aa",
+      primary: app.$config.public.colorPrimary,
+      white: "#fff",
+      gray900: "#111827",
       "primary-darken-1": "#874e0c",
       "primary-darken-2": "#44490c",
       secondary: "#8500fb",

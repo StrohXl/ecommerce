@@ -5,7 +5,7 @@ const theme = useTheme();
 </script>
 <template>
   <v-theme-provider :theme="theme">
-    <v-layout class="!grid">
+    <v-layout class="!grid bg-gray-100/50" >
       <AppBar />
       <NavigationDrawer />
       <NavigationDrawerShoppingCart />

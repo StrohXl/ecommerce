@@ -1,5 +1,8 @@
 import Cookies from "js-cookie";
- const createCookie = () => {
+export default function () {
   Cookies.set("client", "asdfasdfas");
-};
-export default createCookie
+  useClientStore().clientActive()
+  setTimeout(()=>{
+    useRouter().push('/')
+  },1000)
+}
