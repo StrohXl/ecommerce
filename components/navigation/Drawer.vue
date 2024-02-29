@@ -9,14 +9,7 @@ const route = useRoute();
     temporary
 
   >
-    <div class="items-center gap-3 flex justify-center mt-10">
-      <NuxtLink href="/sign-up">
-        <v-btn variant="outlined" color="primary"> Inscribirse </v-btn>
-      </NuxtLink>
-      <NuxtLink href="/sign-in">
-        <v-btn color="primary" variant="flat"> Ingresar </v-btn>
-      </NuxtLink>
-    </div>
+    <NavigationButtonsSignUp/>
 
     <v-list density="compact" class="my-10" nav >
       <template v-for="item in site.nav" :key="item.title">

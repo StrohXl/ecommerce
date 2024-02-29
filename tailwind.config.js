@@ -1,12 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-console.log(useRuntimeConfig().public.colorPrimary)
 export default {
   content: [],
   theme: {
     extend: {
-      colors:{
-        "primary": "#fff"
-      },
       fontSize:{
         '10xl': '10rem',
         '12xl': '12rem',

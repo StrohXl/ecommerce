@@ -1,5 +1,5 @@
 <template>
-  <div v-if="useClientStore().client == 'true'" class="flex gap-3">
+  <div v-if="useClientStore().client == 'true'" class="hidden md:flex gap-3">
     <v-tooltip text="Carrito de Compras" location="bottom">
       <template v-slot:activator="{ props }">
         <v-btn
