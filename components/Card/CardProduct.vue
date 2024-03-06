@@ -3,9 +3,9 @@ defineProps(["title", "image", "price", "id"]);
 </script>
 
 <template>
-  <NuxtLink :href="`/product/${id}`" :title="title" >
+  <NuxtLink :href="`/product/${id}`" :title="title">
     <v-card
-      class="hover:!shadow-xl max-w-[220px] mx-auto hover:!shadow-black/20 cursor-pointer !relative"
+      class="hover:!shadow-lg !border-1 !border-gray-200 max-w-[220px] mx-auto cursor-pointer !relative"
     >
       <div>
         <v-img
@@ -17,7 +17,7 @@ defineProps(["title", "image", "price", "id"]);
           max-height="220"
         />
       </div>
-      <v-card-subtitle class="!opacity-100 pt-3 border-t-2 mt-2">
+      <v-card-subtitle class="!opacity-100 !text-lg pt-3 border-t-2 mt-2">
         {{ title }}
       </v-card-subtitle>
       <v-card-title class="mb-5"
@@ -25,7 +25,7 @@ defineProps(["title", "image", "price", "id"]);
       >
       <v-btn
         @click.prevent="openModalFavorite()"
-        color="primary"
+        color="primary-darken-1"
         icon="mdi-heart"
         variant="text"
         class="!absolute top-2 right-2"

@@ -19,7 +19,8 @@ function onClick(){
     class="max-w-sm"
     :loading="loading"
     density="compact"
-    variant="outlined"
+    variant="solo"
+    color="primary-darken-1"
     label="Buscar"
     append-inner-icon="mdi-magnify"
     single-line

@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
-        // @ts-expect-error
         config.plugins.push(vuetify({ autoImport: true }));
       });
     },
@@ -15,7 +14,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "vue-recaptcha/nuxt",
     "nuxt-icon",
-    "nuxt-icons"
+    "nuxt-icons",
     //...
   ],
   app: {
@@ -36,6 +35,7 @@ export default defineNuxtConfig({
     public: {
       title: process.env.NUXT_TITLE_PAGE,
       colorPrimary: process.env.NUXT_PRIMARY_COLOR,
+      urlBackend: process.env.URL_BACKEND_ECOOMERCE,
     },
   },
 

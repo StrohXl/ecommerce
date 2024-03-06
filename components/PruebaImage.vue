@@ -83,7 +83,7 @@ onMounted(() => {
         :class="`!absolute z-10 cursor-pointer bottom-5 right-5 opacity-0 ${
           div1 && 'opacity-100'
         }`"
-        color="primary"
+        color="primary-darken-1"
         >Ver Ofertas</v-btn
       >
       <img
@@ -102,7 +102,7 @@ onMounted(() => {
         :class="`!absolute z-10 bottom-5 right-5 opacity-0 ${
           div2 && 'opacity-100'
         }`"
-        color="primary"
+        color="primary-darken-1"
         >Ver Ofertas</v-btn
       >
       <img
@@ -120,7 +120,7 @@ onMounted(() => {
         :class="`!absolute z-10 bottom-5 right-5 opacity-0 ${
           div3 && 'opacity-100'
         }`"
-        color="primary"
+        color="primary-darken-1"
         >Ver Ofertas</v-btn
       >
       <img
@@ -138,7 +138,7 @@ onMounted(() => {
         :class="`!absolute z-10 bottom-5 right-5 opacity-0 ${
           div4 && 'opacity-100'
         }`"
-        color="primary"
+        color="primary-darken-1"
         >Ver Ofertas</v-btn
       >
       <img

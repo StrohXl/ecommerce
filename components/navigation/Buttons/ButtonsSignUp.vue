@@ -4,10 +4,10 @@
     class="items-center gap-2 hidden md:flex"
   >
     <NuxtLink href="/sign-up">
-      <v-btn color="primary" variant="outlined"> Inscribirse </v-btn>
+      <v-btn  variant="outlined"> Inscribirse </v-btn>
     </NuxtLink>
     <NuxtLink href="/sign-in">
-      <v-btn variant="flat" color="primary"> Ingresar </v-btn>
+      <v-btn variant="flat" class="text-primary" > Ingresar </v-btn>
     </NuxtLink>
   </div>
 </template>

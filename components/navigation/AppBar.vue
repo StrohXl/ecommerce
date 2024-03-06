@@ -4,10 +4,10 @@ onMounted(() => {
 });
 </script>
 <template>
-  <v-app-bar class="md:py-4 md:pb-7 !border-b-1 !shadow-md">
+  <v-app-bar color="primary" scroll-behavior="elevate" class="md:py-4 md:pb-7 !border-none">
     <nav class="nav-bar max-w-[1200px] mx-auto px-5">
       <div class="flex items-center gap-5 row-start-1">
-        <h3 class="mb-0 text-primary">
+        <h3 class="mb-0">
           <NuxtLink to="/">
             {{ $config.public.title }}
           </NuxtLink>
@@ -15,11 +15,7 @@ onMounted(() => {
         <TextSearch class="!hidden md:!block" />
       </div>
       <div class="buttons-actions">
-        <v-btn
-          color="primary"
-          icon="mdi-magnify"
-          class="md:!hidden"
-        ></v-btn>
+        <v-btn icon="mdi-magnify" class="md:!hidden"></v-btn>
         <NavigationButtonsSignIn />
         <NavigationButtonsSignUp />
         <NavigationButtonsDrawer />

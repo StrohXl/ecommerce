@@ -1,6 +1,8 @@
 <template>
   <div class="py-20">
-    <div class="sm:border-2 max-w-[510px] mx-auto px-5 sm:p-10 rounded-lg md:shadow-xl md:shadow-black/30">
+    <div
+      class="sm:border-2 max-w-[510px] mx-auto px-5  sm:p-10 rounded-lg md:shadow-xl md:shadow-black/30"
+    >
       <v-avatar
         class="!bg-gray-50 !shadow-md shadow-black border-1 mx-auto mb-5 !flex"
         size="70"

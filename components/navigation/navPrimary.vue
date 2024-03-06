@@ -13,7 +13,6 @@ onMounted(() => {
   <v-tabs
     align-tabs="center"
     v-model="tab"
-    color="primary"
     density="compact"
     class="col-span-2 mt-[70px] !hidden md:!flex"
   >
@@ -25,9 +24,11 @@ onMounted(() => {
         :value="index"
         @click="useRouter().push(item.link)"
       >
-        {{ item.title }}
+        <div class="text-[12px]">
+          {{ item.title }}
+        </div>
       </v-tab>
-      
+
       <MenusMenuCategorias
         v-if="item.subMenu"
         class="flex items-center h-10 uppercase text-sm px-5"

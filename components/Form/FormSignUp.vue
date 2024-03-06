@@ -90,7 +90,7 @@ const validate = async () => {
       ></v-text-field>
 
       <div class="d-flex flex-column items-end gap-4">
-        <v-btn @click="validate()" color="primary" class="mt-4" block>
+        <v-btn @click="validate()" color="primary-darken-1" class="mt-4" block>
           Inscribirse
         </v-btn>
         <NuxtLink class="text-primary-lighten-1" href="/sign-in">

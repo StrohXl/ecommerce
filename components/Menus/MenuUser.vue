@@ -4,7 +4,6 @@
       <template v-slot:activator="{ props }">
         <v-btn
           variant="outlined"
-          color="primary"
           icon="mdi-account"
           v-bind="props"
           class="buttons-actions-icon"

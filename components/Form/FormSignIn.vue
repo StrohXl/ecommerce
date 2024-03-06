@@ -65,7 +65,7 @@ const validate = async () => {
       <div class="d-flex flex-column items-end gap-4">
         <v-btn
           @click="validate()"
-          color="primary"
+          color="primary-darken-1"
           :loading="loading"
           class="mt-4"
           block
