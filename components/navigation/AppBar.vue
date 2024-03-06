@@ -4,7 +4,11 @@ onMounted(() => {
 });
 </script>
 <template>
-  <v-app-bar color="primary" scroll-behavior="elevate" class="md:py-4 md:pb-7 !border-none">
+  <v-app-bar
+    color="primary"
+    scroll-behavior="elevate"
+    class="md:py-4 md:pb-7 !border-none"
+  >
     <nav class="nav-bar max-w-[1200px] mx-auto px-5">
       <div class="flex items-center gap-5 row-start-1">
         <h3 class="mb-0">
@@ -16,6 +20,7 @@ onMounted(() => {
       </div>
       <div class="buttons-actions">
         <v-btn icon="mdi-magnify" class="md:!hidden"></v-btn>
+        <NavigationButtonsShoppingCart />
         <NavigationButtonsSignIn />
         <NavigationButtonsSignUp />
         <NavigationButtonsDrawer />
