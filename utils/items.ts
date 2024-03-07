@@ -4,7 +4,7 @@ const items: Items[] = [
   {
     id: 1,
     image: "/pc-1.webp",
-    title: "Pc gamer 1",
+    title: "Pc gamer 1 producto random tatatata",
     precio: 200,
   },
   {

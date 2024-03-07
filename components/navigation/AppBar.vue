@@ -20,10 +20,10 @@ onMounted(() => {
       </div>
       <div class="buttons-actions">
         <v-btn icon="mdi-magnify" class="md:!hidden"></v-btn>
-        <NavigationButtonsShoppingCart />
-        <NavigationButtonsSignIn />
-        <NavigationButtonsSignUp />
-        <NavigationButtonsDrawer />
+        <ButtonIconShoppingCart />
+        <ButtonSignIn />
+        <ButtonSignUp />
+        <ButtonDrawer />
       </div>
       <NavigationNavPrimary />
     </nav>

@@ -5,7 +5,7 @@ import site from "@/site";
   <v-navigation-drawer
     class="!z-[1200] !h-screen !-top-0"
     location="right"
-    width="300"
+    width="400"
     v-model="useDrawerStore().drawerShoppingCart"
     temporary
   >

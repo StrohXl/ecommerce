@@ -23,13 +23,7 @@ defineProps(["title", "image", "price", "id"]);
       <v-card-title class="mb-5"
         ><span class="text-primary">U$S</span> {{ price }}</v-card-title
       >
-      <v-btn
-        @click.prevent="openModalFavorite()"
-        color="primary-darken-1"
-        icon="mdi-heart"
-        variant="text"
-        class="!absolute top-2 right-2"
-      />
+      <ButtonIconHeart />
     </v-card>
   </NuxtLink>
 </template>

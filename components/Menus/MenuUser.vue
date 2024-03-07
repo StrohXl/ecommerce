@@ -3,7 +3,6 @@
     <v-menu location="bottom center" open-on-hover>
       <template v-slot:activator="{ props }">
         <v-btn
-          variant="outlined"
           icon="mdi-account"
           v-bind="props"
           class="buttons-actions-icon"

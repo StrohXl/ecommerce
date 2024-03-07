@@ -4,7 +4,6 @@
       <v-btn
         v-bind="props"
         @click="useDrawerStore().openDrawerShopping()"
-        variant="outlined"
         icon="mdi-cart-outline"
         class="buttons-actions-icon"
       />
