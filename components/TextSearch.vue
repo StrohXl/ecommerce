@@ -1,17 +1,16 @@
 <script lang="ts" setup>
-const router = useRouter()
+const router = useRouter();
 const loading = ref(false);
-const search = ref('');
-// Funciones 
+const search = ref("");
+// Funciones
 
-function onClick(){
-  loading.value = true
-  setTimeout(()=>{
-    loading.value = false
-    router.push(`/search/${search.value}`)
-  },2000)
+function onClick() {
+  loading.value = true;
+  setTimeout(() => {
+    loading.value = false;
+    router.push(`/search/${search.value}`);
+  }, 1000);
 }
-
 </script>
 
 <template>
@@ -25,6 +24,7 @@ function onClick(){
     append-inner-icon="mdi-magnify"
     single-line
     hide-details
+    @keypress="(value) => value.key == 'Enter' && onClick()"
     v-model="search"
     @click:append-inner="onClick"
   ></v-text-field>
