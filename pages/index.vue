@@ -14,7 +14,7 @@ useHead({
       :key="index"
       :title="item.title"
       :image="item.image"
-      :price="item.precio"
+      :price="item.price"
       :id="item.id"
     />
     <CardProduct
@@ -22,7 +22,7 @@ useHead({
       :key="index"
       :title="item.title"
       :image="item.image"
-      :price="item.precio"
+      :price="item.price"
       :id="item.id"
     />
   </div>

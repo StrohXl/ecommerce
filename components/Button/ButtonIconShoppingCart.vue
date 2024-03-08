@@ -2,7 +2,7 @@
   <v-tooltip text="Carrito de Compras" location="bottom">
     <template v-slot:activator="{ props }">
       <v-badge
-        :content="useShoppingCart().shoppingCart.length"
+        :content="useShoppingCart().shoppingCartLength"
         color="white"
         offset-x="5"
         offset-y="5"

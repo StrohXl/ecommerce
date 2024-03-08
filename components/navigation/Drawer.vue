@@ -5,7 +5,7 @@ const route = useRoute();
 <template>
   <v-navigation-drawer
     v-model="useDrawerStore().drawer"
-    class="md:!none !w-screen pt-2 !bg-white !h-full"
+    class="md:!hidden !w-[100%] pt-2 !bg-white"
     temporary
 
   >

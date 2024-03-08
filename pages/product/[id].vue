@@ -12,7 +12,7 @@ const select = ref(1);
       <div
         class="max-w-[500px] mx-auto grid grid-cols-1 md:grid-rows-[400px] md:grid-cols-[50%,45%] lg:grid-cols-[60%,35%] gap-x-[5%] md:max-w-full"
       >
-        <v-img contain :src="product.image"> </v-img>
+        <v-img contain :src="product.image" class="!max-h-[300px] sm:!max-h-[400px] md:!max-h-full"> </v-img>
         <div
           class="border-t-2 pt-5 md:!mt-0 md:pl-5 md:border-t-0 md:border-l-2 !border-gray-200/70 !mt-10 md:grid md:grid-cols-1 justify-between"
         >
@@ -20,11 +20,11 @@ const select = ref(1);
             <h1 class="!text-2xl pr-3">{{ product.title }}</h1>
             <v-card-title class="!font-bold !text-3xl mt-3 !pl-0">
               <span class="text-primary opacity-100"> U$S </span>
-              {{ product.precio }}
+              {{ product.price }}
             </v-card-title>
           </div>
           <div
-            class="grid sm:grid-cols-2 gap-2 mt-5 !w-full md:flex flex-col md:justify-center"
+            class="grid  gap-2 mt-5 !w-full md:flex flex-col md:justify-center"
           >
             <v-select
               :hide-details="true"
@@ -53,7 +53,7 @@ const select = ref(1);
               append-icon="mdi-cart-plus"
               @click="
                 useShoppingCart().addProductInShoppingCart({
-                  id,
+                  product,
                   cuantity: select,
                 })
               "

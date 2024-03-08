@@ -36,27 +36,29 @@
     @apply text-black;
   }
 }
-.nuxt-icon svg{
+.nuxt-icon svg {
   margin-bottom: 0;
   width: 100% !important;
   height: 100% !important;
 }
 
 @keyframes moveControl {
-  0%{
+  0% {
     transform: translateY(-2%);
   }
-  50%{
+  50% {
     transform: translateY(0%);
   }
-  100%{
+  100% {
     transform: translateY(-2%);
   }
 }
-
-.control{
+.v-navigation-drawer__scrim {
+  height: 100% !important;
+}
+.control {
   animation: moveControl 3s ease-in-out infinite;
 }
-html{
+html {
   scrollbar-width: thin;
 }

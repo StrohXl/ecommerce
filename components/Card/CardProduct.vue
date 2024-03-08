@@ -5,7 +5,7 @@ defineProps(["title", "image", "price", "id"]);
 <template>
   <NuxtLink :href="`/product/${id}`" :title="title">
     <v-card
-      class="hover:!shadow-lg !border-1 !border-gray-200 max-w-[220px] mx-auto cursor-pointer !relative"
+      class="hover:!shadow-xl hover:!shadow-gray-300 !border-1 !border-gray-200 max-w-[220px] mx-auto cursor-pointer !relative"
     >
       <div>
         <v-img

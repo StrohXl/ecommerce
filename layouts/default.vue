@@ -5,7 +5,7 @@ const theme = useTheme();
 </script>
 <template>
   <v-theme-provider :theme="theme">
-    <v-layout class="!grid bg-[#fefefe]" >
+    <v-app class="!grid bg-[#fefefe]" >
       <AppBar />
       <NavigationDrawer />
       <NavigationDrawerShoppingCart />
@@ -15,6 +15,6 @@ const theme = useTheme();
       <NavigationFooter />
       <ModalShopping/>
 
-    </v-layout>
+    </v-app>
   </v-theme-provider>
 </template>
