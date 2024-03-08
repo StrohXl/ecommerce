@@ -35,6 +35,6 @@ onMounted(() => {
   @apply grid grid-cols-2 md:grid-cols-[55%,auto] md:grid-rows-2 items-center justify-between w-full px-3 h-full;
 }
 .buttons-actions {
-  @apply flex justify-end row-start-1 gap-0 md:gap-3;
+  @apply flex justify-end row-start-1 gap-0 ;
 }
 </style>

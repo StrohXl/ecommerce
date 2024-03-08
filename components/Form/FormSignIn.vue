@@ -11,10 +11,17 @@ const emailRules = [
     /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/i.test(v) ||
     "Email invalido",
 ];
+const visible = ref(false);
 const passwordRules = [
-  (v: string) => !!v || "Contrasena requerida",
+  (v: string) => !!v || "Contraseña requerida",
   (v: string) =>
-    v.length > 5 || "La contrasena debe de tener minimo 5 caracteres",
+    v.length > 8 || "La contraseña debe de tener minimo 8 caracteres",
+  (v: string) =>
+    /^(?=.*[A-Z]).+$/g.test(v) ||
+    "La contraseña debe de tener al menos una letra en Mayuscula",
+  (v: string) =>
+    /^(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).+$/i.test(v) ||
+    "La contraseña debe de tener al menos un caracter especial",
 ];
 
 const validate = async () => {
@@ -28,7 +35,7 @@ const validate = async () => {
         checkbox: checkbox.value,
       });
       loading.value = false;
-      createCookie()
+      createCookie();
     }, 2000);
   }
 };
@@ -51,8 +58,11 @@ const validate = async () => {
         color="primary"
         :rules="passwordRules"
         v-model="password"
-        label="Contrasena"
+        label="Contraseña"
         required
+        :type="visible ? 'text' : 'password'"
+        :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
+        @click:append-inner="visible = !visible"
       ></v-text-field>
 
       <v-checkbox

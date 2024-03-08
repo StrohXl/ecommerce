@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const id = ref(useRoute().params.id);
+const id = ref(Number(useRoute().params.id));
 const product = items.find((item: any) => item.id == id.value);
-const select = ref();
+const select = ref(1);
 </script>
 
 <template>
@@ -24,13 +24,15 @@ const select = ref();
             </v-card-title>
           </div>
           <div
-            class="grid sm:grid-cols-2 gap-4 mt-5 !w-full md:flex flex-col md:gap-5 md:justify-center"
+            class="grid sm:grid-cols-2 gap-2 mt-5 !w-full md:flex flex-col md:justify-center"
           >
             <v-select
+              :hide-details="true"
               variant="outlined"
               color="primary"
-              density="compact"
+              class="items-center !grid !flex-none mb-5"
               label="Cantidad"
+              placeholder="1"
               :items="[1, 2, 3, 4, 5, 6, 7, 8]"
               v-model="select"
             />
@@ -42,12 +44,19 @@ const select = ref();
             >
               Comprar
             </v-btn>
+
             <v-btn
               size="large"
               class="!normal-case"
               variant="outlined"
               color="primary"
               append-icon="mdi-cart-plus"
+              @click="
+                useShoppingCart().addProductInShoppingCart({
+                  id,
+                  cuantity: select,
+                })
+              "
             >
               Anadir al Carrito
             </v-btn>

@@ -14,7 +14,7 @@
         >
           <v-icon class="!text-4xl text-primary">mdi-account</v-icon>
         </v-avatar>
-        <h5 class="text-center mb-8 font-normal">Iniciar sesion</h5>
+        <h5 class="text-center mb-8 font-normal">Iniciar sesión</h5>
         <FormSignIn class="" />
       </div>
     </div>
