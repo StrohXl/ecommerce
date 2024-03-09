@@ -27,7 +27,7 @@ const emailRules = [
 const passwordRules = [
   (v: string) => !!v || "Contraseña requerida",
   (v: string) =>
-    v.length > 8 || "La contraseña debe de tener minimo 8 caracteres",
+    v.length >= 8 || "La contraseña debe de tener minimo 8 caracteres",
   (v: string) =>
     /^(?=.*[A-Z]).+$/g.test(v) ||
     "La contraseña debe de tener al menos una letra en Mayuscula",
