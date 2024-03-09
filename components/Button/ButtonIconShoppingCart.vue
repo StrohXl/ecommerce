@@ -1,3 +1,8 @@
+<script setup>
+onMounted(() => {
+  chargeListShoppingCart();
+});
+</script>
 <template>
   <v-tooltip text="Carrito de Compras" location="bottom">
     <template v-slot:activator="{ props }">

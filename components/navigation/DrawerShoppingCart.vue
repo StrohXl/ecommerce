@@ -12,7 +12,11 @@ import site from "@/site";
   >
     <div class="text-xl font-semibold grid grid-rows-[auto,1fr,auto] h-full">
       <div class="border-b-2 flex items-center px-3 gap-3">
-        <v-btn variant="text" icon="mdi-close" @click="useDrawerStore().closeDrawerShoppping()"></v-btn>
+        <v-btn
+          variant="text"
+          icon="mdi-close"
+          @click="useDrawerStore().closeDrawerShoppping()"
+        ></v-btn>
         <h2 class="flex text-2xl items-center py-3 mb-0">Carrito de compras</h2>
       </div>
       <div class="h-full overflow-auto" style="scrollbar-width: none">
@@ -28,14 +32,16 @@ import site from "@/site";
         >
           <v-list-item
             variant="outlined"
-            class="!rounded-md !border-gray-300"
+            class="!rounded-md !border-gray-300 !max-h-[108px]"
             v-for="(item, index) in useShoppingCart().shoppingCart"
             :value="index"
             :key="index"
           >
             <NuxtLink :href="`/product/${item.product.id}`">
-              <div class="grid grid-cols-[20%,auto] gap-2 py-2">
-                <img :src="item.product.image" />
+              <div
+                class="grid grid-cols-[20%,auto] grid-rows-[100px] gap-2 py-2"
+              >
+                <img :src="item.product.image" class="object-contain h-full" />
                 <div>
                   <h5 class="!mb-0">{{ item.product.title }}</h5>
                   <h6 class="!mt-0 !pt-0 font-semibold">
@@ -49,7 +55,15 @@ import site from "@/site";
                       class="!normal-case"
                       >Cant:<b>{{ item.cuantity }}</b></v-btn
                     >
-                    <v-btn variant="text" class="!normal-case" size="small"
+                    <v-btn
+                      @click.prevent="
+                        useShoppingCart().removeProductInShoppingCart(
+                          item.product.id
+                        )
+                      "
+                      variant="text"
+                      class="!normal-case"
+                      size="small"
                       >Eliminar</v-btn
                     >
                   </div>

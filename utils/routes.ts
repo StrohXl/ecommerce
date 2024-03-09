@@ -1,5 +1,3 @@
-
-
 const routes = {
   categories: {
     getAll: "",
