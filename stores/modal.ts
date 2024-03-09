@@ -2,6 +2,7 @@ import { defineStore } from "pinia";
 export const useModalStore = defineStore("modal", {
   state: () => ({
     modalFavorite: false,
+    modalShop: false,
   }),
   getters: {},
   actions: {
@@ -10,6 +11,14 @@ export const useModalStore = defineStore("modal", {
     },
     closeModalFavorite() {
       this.modalFavorite = false;
+    },
+    openModalShop() {
+      if(useClientStore().client == 'false'){
+        this.modalShop = true;
+      }
+    },
+    closeModalShop() {
+      this.modalShop = false;
     },
   },
 });

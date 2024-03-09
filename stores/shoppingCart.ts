@@ -9,7 +9,8 @@ export const useShoppingCart = defineStore("shoppingCart", {
   getters: {},
   actions: {
     addProductInShoppingCart(item: ProductShoppingCart) {
-      const product = this.shoppingCart.find((i) => i.id == item.product.id);
+      const product = this.shoppingCart.find((i) => i.product.id == item.product.id);
+      console.log(product)
       if (product) {
         product.cuantity = item.cuantity;
       } else {

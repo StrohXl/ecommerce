@@ -90,7 +90,7 @@ import site from "@/site";
             append-icon="mdi-delete"
             >Quitar Todo</v-btn
           >
-          <v-btn color="primary" append-icon="mdi-cart">Comprar Todo</v-btn>
+          <v-btn @click="useModalStore().openModalShop()" color="primary" append-icon="mdi-cart">Comprar Todo</v-btn>
         </div>
       </div>
     </div>

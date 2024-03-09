@@ -13,7 +13,8 @@ const theme = useTheme();
         <slot />
       </div>
       <NavigationFooter />
-      <ModalShopping/>
+      <ModalShop/>
+      <ModalHeart/>
 
     </v-app>
   </v-theme-provider>
