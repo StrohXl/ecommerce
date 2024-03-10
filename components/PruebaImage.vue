@@ -88,7 +88,7 @@ onMounted(() => {
       >
       <img
         class="!absolute"
-        src="../public/laptops-regreso-a-clases-2022.jpg"
+        src="/laptops-regreso-a-clases-2022.jpg"
         alt=""
       />
     </div>
@@ -107,7 +107,7 @@ onMounted(() => {
       >
       <img
         class="!absolute"
-        src="../public/Comparación-de-consolas.jpg"
+        src="/Comparación-de-consolas.jpg"
         alt=""
       />
     </div>
@@ -125,7 +125,7 @@ onMounted(() => {
       >
       <img
         class="!absolute"
-        src="../public/laptops-regreso-a-clases-2022.jpg"
+        src="/laptops-regreso-a-clases-2022.jpg"
         alt=""
       />
     </div>
@@ -143,7 +143,7 @@ onMounted(() => {
       >
       <img
         class="!absolute"
-        src="../public/lista-lanzamientos-moviles-2023.webp"
+        src="/lista-lanzamientos-moviles-2023.webp"
         alt=""
       />
     </div>
