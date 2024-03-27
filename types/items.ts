@@ -1,6 +1,8 @@
 export default class Items {
-  id!: number;
-  image!: string;
-  title!: string;
-  price!: number;
+  id!: string;
+  imagePrincipal!: string;
+  images: string[];
+  name!: string;
+  description!: string;
+  price!: string;
 }

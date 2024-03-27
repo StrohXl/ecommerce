@@ -41,11 +41,14 @@ import site from "@/site";
               <div
                 class="grid grid-cols-[20%,auto] grid-rows-[100px] gap-2 py-2"
               >
-                <img :src="item.product.image" class="object-contain h-full" />
+                <img
+                  :src="item.product.imagePrincipal"
+                  class="object-contain h-full"
+                />
                 <div>
-                  <h5 class="!mb-0">{{ item.product.title }}</h5>
+                  <h6 class="!mb-0">{{ item.product.name }}</h6>
                   <h6 class="!mt-0 !pt-0 font-semibold">
-                    U$S{{ item.product.price }}
+                    ${{ item.product.price }}
                   </h6>
                   <div class="flex gap-1">
                     <v-btn
@@ -90,7 +93,12 @@ import site from "@/site";
             append-icon="mdi-delete"
             >Quitar Todo</v-btn
           >
-          <v-btn @click="useModalStore().openModalShop()" color="primary" append-icon="mdi-cart">Comprar Todo</v-btn>
+          <v-btn
+            @click="useModalStore().openModalShop()"
+            color="primary"
+            append-icon="mdi-cart"
+            >Comprar Todo</v-btn
+          >
         </div>
       </div>
     </div>

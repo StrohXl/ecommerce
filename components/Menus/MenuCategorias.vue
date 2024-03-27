@@ -1,29 +1,47 @@
 <script setup>
 import site from "@/site";
-const menu = ref()
+const categories = ref(useCategoriesStore().categories);
+const menu = ref();
 </script>
 <template>
   <div class="text-center">
-    <v-menu open-on-hover v-model="menu" location="bottom center" close-delay="50" open-delay="50">
+    <v-menu
+      open-on-hover
+      v-model="menu"
+      location="bottom center"
+      close-delay="50"
+      open-delay="50"
+    >
       <template v-slot:activator="{ props }">
-        <span class="cursor-pointer text-[12px]" variant="text" dark v-bind="props">
+        <span
+          class="cursor-pointer ml-2 text-secondary font-semibold opacity-90"
+          variant="text"
+          dark
+          v-bind="props"
+        >
           Categorias
-          <Icon :class="`${menu && 'rotate-180'} mb-[2px]`" name="ic:outline-keyboard-arrow-down" size="1.5em" />
+          <v-icon
+            :class="`${
+              menu && 'rotate-180'
+            } mb-[2px] -translate-x-1 transition-transform duration-300 !text-2xl`"
+          >
+            mdi-menu-down
+          </v-icon>
         </span>
       </template>
 
       <v-list bg-color="#fafafa" class="mt-4">
         <v-list-item
-          :value="item.title"
-          v-for="(item, index) in site.nav[1].subMenu"
+          :value="item.name"
+          v-for="(item, index) in categories"
           :key="index"
         >
           <NuxtLink
-            class="block"
+            class="block !pr-10"
             :model-value="isActive"
-            :href="`/${item.link}`"
+            :href="`/categorias/${item.name}`"
           >
-            {{ item.title }}
+            {{ item.name }}
           </NuxtLink>
         </v-list-item>
       </v-list>

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import configVuetify from '@/plugins/vuetify'
 export default {
   content: [],
   theme: {
@@ -20,6 +21,8 @@ export default {
       borderWidth: {
         1: "1px",
       },
+
+      
     },
   },
   plugins: [],

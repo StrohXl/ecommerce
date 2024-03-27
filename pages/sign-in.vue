@@ -1,11 +1,10 @@
 <template>
-  <div class="mx-3">
+  <div class="mx-3 min-h-screen flex justify-center items-center">
     <div
-      class="my-16 py-10 md:shadow-xl md:mx-auto !max-w-[1200px] border-2 rounded-lg grid md:grid-cols-2 items-center"
+      class="bg-white w-full py-10 md:shadow-xl md:mx-auto !max-w-[450px] border-2 rounded-lg items-center"
     >
-      <nuxt-icon name="pc" filled class="hidden md:!block" />
-      <div class="md:border-l-2 px-3">
-        <h3 class="text-center mb-12 font-normal">
+      <div class="">
+        <h3 class="text-center mb-6 font-normal">
           {{ useRuntimeConfig().public.title }}
         </h3>
         <v-avatar

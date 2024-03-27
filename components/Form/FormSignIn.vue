@@ -72,12 +72,12 @@ const validate = async () => {
         required
       ></v-checkbox>
 
-      <div class="d-flex flex-column items-end gap-4">
+      <div class="d-flex flex-column items-end gap-">
         <v-btn
           @click="validate()"
           color="primary-darken-1"
           :loading="loading"
-          class="mt-4"
+          class="mt-0"
           block
         >
           Ingresar

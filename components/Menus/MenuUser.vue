@@ -5,7 +5,7 @@
         <v-btn
           icon="mdi-account"
           v-bind="props"
-          class="buttons-actions-icon"
+          class="buttons-actions-icon !text-xl"
         ></v-btn>
       </template>
       <v-list bg-color="#fafafa" class="mt-3" color="primary">

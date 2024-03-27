@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import servicesPricipal from "./utils/servicesPricipal";
+servicesPricipal();
+</script>
 <template>
-  <NuxtLoadingIndicator/>
+  <NuxtLoadingIndicator />
   <NuxtLayout>
-      <NuxtPage />
+    <NuxtPage />
   </NuxtLayout>
 </template>

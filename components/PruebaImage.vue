@@ -6,7 +6,7 @@ const div3 = ref(false);
 const div4 = ref(false);
 let timeout: any;
 const mouseLeave = () => {
-  runInterval()
+  runInterval();
   div1.value = false;
   div2.value = false;
   div3.value = false;
@@ -73,9 +73,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="prueba-imagen max-w-6xl mx-auto bg-black h-[500px] mb-20">
+  <section class="prueba-imagen max-w-[1400px] mx-auto bg-black h-[500px] mb-20">
     <div
-      :class="`relative ${div1 == true && '!w-[50%] !opacity-100'}`"
+      :class="`relative ${div1 == true ? '!w-[100px]  !opacity-100' : 'hidden'}`"
       @mouseenter="mouseEnter(0)"
       @mouseleave="mouseLeave()"
     >
@@ -86,15 +86,11 @@ onMounted(() => {
         color="primary-darken-1"
         >Ver Ofertas</v-btn
       >
-      <img
-        class="!absolute"
-        src="/laptops-regreso-a-clases-2022.jpg"
-        alt=""
-      />
+      <img class="!absolute" src="/laptops-regreso-a-clases-2022.jpg" alt="" />
     </div>
 
     <div
-      :class="`relative ${div2 == true && '!w-[50%] !opacity-100'}`"
+      :class="`relative ${div2 == true ? '!w-[100%] !opacity-100' : 'hidden'}`"
       @mouseenter="mouseEnter(1)"
       @mouseleave="mouseLeave()"
     >
@@ -105,14 +101,10 @@ onMounted(() => {
         color="primary-darken-1"
         >Ver Ofertas</v-btn
       >
-      <img
-        class="!absolute"
-        src="/Comparación-de-consolas.jpg"
-        alt=""
-      />
+      <img class="!absolute" src="/Comparación-de-consolas.jpg" alt="" />
     </div>
     <div
-      :class="`relative ${div3 == true && '!w-[50%] !opacity-100'}`"
+      :class="`relative ${div3 == true ? '!w-[100%] !opacity-100' : 'hidden'}`"
       @mouseenter="mouseEnter(2)"
       @mouseleave="mouseLeave()"
     >
@@ -123,14 +115,10 @@ onMounted(() => {
         color="primary-darken-1"
         >Ver Ofertas</v-btn
       >
-      <img
-        class="!absolute"
-        src="/laptops-regreso-a-clases-2022.jpg"
-        alt=""
-      />
+      <img class="!absolute" src="/laptops-regreso-a-clases-2022.jpg" alt="" />
     </div>
     <div
-      :class="`relative ${div4 == true && '!w-[50%] !opacity-100'}`"
+      :class="`relative ${div4 == true ? '!w-[100%] !opacity-100' : 'hidden'}`"
       @mouseenter="mouseEnter(3)"
       @mouseleave="mouseLeave()"
     >
@@ -158,9 +146,7 @@ onMounted(() => {
   height: 100%;
 }
 .prueba-imagen > div {
-  width: 0px;
-  flex-grow: 1;
-
+  @apply w-full;
   opacity: 0.6;
   filter: contrast(80%);
   transition: 0.5s;

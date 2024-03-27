@@ -6,7 +6,7 @@ const icons = ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"];
       <v-btn
         v-for="icon in icons"
         :key="icon"
-        class="mx-4 !text-xl"
+        class="mx-0 !text-xl"
         :icon="icon"
         variant="text"
       ></v-btn
