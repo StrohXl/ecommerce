@@ -24,7 +24,7 @@ useHead({
         class="mx-auto grid mt-0 grid-cols-[auto,auto] lg:gap-7 sm:grid-cols-[auto,auto,auto] md:grid-cols-[auto,auto,auto,auto,auto,auto] sm: px-3 justify-center max-w-[1400px] gap-3"
       >
         <CardProduct
-          v-for="(item, index) in items.slice(0,12)"
+          v-for="(item, index) in items.slice(0, 12)"
           :key="index"
           :name="item.name"
           :imagePrincipal="item.imagePrincipal"

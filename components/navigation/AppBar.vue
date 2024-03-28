@@ -9,7 +9,7 @@ onMounted(() => {
   <v-app-bar
     scroll-behavior="elevate"
     color="primary"
-    class="backdrop-blur-sm py-1 !border-b-2 md:!z-[1000]"
+    class="backdrop-blur-sm  !border-b-2 md:!z-[1000]"
   >
     <nav class="nav-bar max-w-[1400px] mx-auto px-5">
       <div class="flex items-center gap-5">

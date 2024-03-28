@@ -60,9 +60,11 @@ import site from "@/site";
                     >
                     <v-btn
                       @click.prevent="
-                        useShoppingCart().removeProductInShoppingCart(
-                          item.product.id
-                        )
+                        () => {
+                          useShoppingCart().removeProductInShoppingCart(
+                            item.product.id
+                          );
+                        }
                       "
                       variant="text"
                       class="!normal-case"

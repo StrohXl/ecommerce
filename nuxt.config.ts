@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     },
     "@pinia/nuxt",
     "@nuxtjs/tailwindcss",
+    'nuxt3-notifications',
     "vue-recaptcha/nuxt",
     "nuxt-icon",
     "nuxt-icons",

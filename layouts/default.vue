@@ -20,6 +20,7 @@ const theme = useTheme();
         <ModalShop />
         <ModalHeart />
       </template>
+      <NuxtNotifications position="bottom right" :max="5" speed="1000" />
     </v-app>
   </v-theme-provider>
 </template>

@@ -6,20 +6,23 @@ const image = ref(product.imagePrincipal);
 </script>
 
 <template>
-  <div class="px-5 mt-16 mb-20">
-    <v-card
-      class="mx-auto !p-8 min-h-[800px] !shadow-xl !shadow-white  max-w-[1400px] my-10 !border-2 !border-gray-300/70"
+  <div class="px-5  bg-white !py-10 md:!py-20">
+    <div
+      class="mx-auto !rounded-none md:!rounded-md min-h-[800px] max-w-[1400px] !border-gray-300/70"
     >
       <div
-        class="max-w-[500px] mx-auto grid grid-cols-1 md:grid-rows-[400px] md:grid-cols-[55%,45%] gap-x-[30px] md:max-w-full"
+        class="mx-auto grid grid-cols-1 md:grid-rows-[400px] md:grid-cols-[55%,40%] gap-x-[10px] md:gap-x-[20px] lg:gap-x-[30px] md:max-w-full"
       >
-        <div class="grid grid-cols-[100px,auto] gap-x-[10px]">
-          <div class="grid gap-2">
+        <div class="grid grid-cols-1 lg:grid-cols-[120px,auto] gap-x-[10px]">
+          <div
+            class="flex lg:grid md:!mx-0 lg:w-full gap-1 h-auto max-h-[600px] overflow-auto lg:!overflow-visible !mt-3 lg:!mt-0 md:!pb-0 pb-3"
+          >
             <v-img
               @click="image = product.imagePrincipal"
               contain
               :src="product.imagePrincipal"
-              class="border-2 cursor-pointer w-full h-28"
+              style="overflow: 1"
+              class="border-2 cursor-pointer h-auto w-auto aspect-[1]"
             />
             <v-img
               v-for="(item, index) in product.images"
@@ -27,17 +30,17 @@ const image = ref(product.imagePrincipal);
               :key="index"
               contain
               :src="item"
-              class="border-2 cursor-pointer w-full h-28"
+              class="border-2 cursor-pointer h-auto w-auto aspect-[1]"
             />
           </div>
           <v-img
             contain
             :src="image"
-            class="!max-h-[300px] border-2 sm:!max-h-[400px] md:!max-h-[600px] md:min-h-[600px]"
+            class="row-start-1 lg:col-start-2 md:border-2 aspect-[1] md:!aspect-auto"
           />
         </div>
         <div
-          class="border-t-2 md:!mt-0 md:pr-36 md:border-t-0 !border-gray-200/70 !mt-10 md:grid md:grid-cols-1 justify-between"
+          class="md:!px-0 md:!mt-0 md:pr-36 md:border-t-0 !mt-5 md:grid md:grid-cols-1 justify-between"
         >
           <div>
             <h1 class="!text-3xl">{{ product.name }}</h1>
@@ -74,10 +77,12 @@ const image = ref(product.imagePrincipal);
               color="primary"
               append-icon="mdi-cart-plus"
               @click="
-                useShoppingCart().addProductInShoppingCart({
-                  product,
-                  cuantity: select,
-                })
+                () => {
+                  useShoppingCart().addProductInShoppingCart({
+                    product,
+                    cuantity: select,
+                  });
+                }
               "
             >
               Anadir al Carrito
@@ -85,7 +90,7 @@ const image = ref(product.imagePrincipal);
           </div>
         </div>
       </div>
-    </v-card>
+    </div>
   </div>
 </template>
 <style>
