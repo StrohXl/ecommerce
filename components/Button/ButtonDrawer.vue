@@ -1,5 +1,5 @@
 <template>
-  <div class="md:!hidden ml-2">
+  <div class="xl:!hidden ml-2">
     <v-btn
       color="secondary"
       @click="useDrawerStore().openDrawer()"

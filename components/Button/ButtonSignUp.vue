@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="useClientStore().client == 'false'"
-    class="items-center gap-2 hidden md:flex ml-3"
+    class="items-center gap-2 hidden lg:flex ml-3"
   >
     <a href="/sign-up">
       <v-btn rounded variant="outlined" color="secondary"> Inscribirse </v-btn>

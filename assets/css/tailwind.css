@@ -75,10 +75,9 @@ html {
   background: #44a4fc;
   border-left: 5px solid #187fe7;
 
-  & .success {
+  &.success {
     background: rgb(var(--v-theme-primary)) !important;
     border-left-color: rgb(var(--v-theme-primary-darken-1)) !important;
-
   }
 
   &.warn {

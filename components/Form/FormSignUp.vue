@@ -106,9 +106,9 @@ const validate = async () => {
         <v-btn @click="validate()" color="primary-darken-1" class="mt-4" block>
           Inscribirse
         </v-btn>
-        <NuxtLink class="text-primary-lighten-1" href="/sign-in">
+        <a class="text-primary-lighten-1" href="/sign-in">
           <v-btn variant="text"> ¿Ya tienes una cuenta? Iniciar sesión </v-btn>
-        </NuxtLink>
+        </a>
       </div>
     </v-form>
   </v-sheet>

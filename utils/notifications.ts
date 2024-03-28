@@ -6,6 +6,7 @@ export default {
         title: "Agregado",
         text: "Se ha agregado un producto al carrito",
         type: "success",
+        
       }),
     modify: () =>
       notify({

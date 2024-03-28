@@ -5,21 +5,22 @@ defineProps(["name", "imagePrincipal", "price", "id"]);
 <template>
   <NuxtLink :href="`/product/${id}`" :title="name">
     <v-card
-      class="hover:!shadow-xl !w-44 sm:!w-48 md:!w-52 hover:!shadow-gray-300 !border-1 !border-gray-200 max-w-[220px] mx-auto cursor-pointer !relative"
+      class="!shadow-none hover:!shadow-xl !w-44  md:!w-52 hover:!shadow-gray-400 !border-2 md:!min-h-80 !border-gray-300/70 mx-auto cursor-pointer !relative"
     >
       <div>
         <v-img
-          class="h-44 md:h-52"
+          class="!h-44 sm:!h-48 md:!h-52"
           :src="imagePrincipal"
           contain
-          max-width="220"
-          max-height="220"
+        
         />
       </div>
-      <v-card-subtitle class="!opacity-100 !text-lg pt-3 border-t-2 mt-2">
+      <v-card-subtitle
+        class="!opacity-90 !text-[12px] md:!text-[13px] pt-4 border-t-2 mt-2 !whitespace-normal !line-clamp-1"
+      >
         {{ name }}
       </v-card-subtitle>
-      <v-card-subtitle class="mb-5 !text-lg">${{ price }}</v-card-subtitle>
+      <v-card-subtitle class="mb-5 !text-lg !opacity-100">${{ price }}</v-card-subtitle>
     </v-card>
   </NuxtLink>
 </template>

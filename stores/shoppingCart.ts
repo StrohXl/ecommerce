@@ -12,7 +12,6 @@ export const useShoppingCart = defineStore("shoppingCart", {
       const product = this.shoppingCart.find(
         (i) => i.product.id == item.product.id
       );
-      console.log(product);
       if (product) {
         notifications.shoppingCart.modify();
         product.cuantity = item.cuantity;

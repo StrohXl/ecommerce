@@ -82,9 +82,9 @@ const validate = async () => {
         >
           Ingresar
         </v-btn>
-        <NuxtLink class="text-primary-lighten-1" href="/sign-up">
-          <v-btn variant="text"> No tienes cuenta? </v-btn>
-        </NuxtLink>
+        <a class="text-primary-lighten-1 mt-2" href="/sign-up">
+          <v-btn variant="text" class="!normal-case"> No tienes cuenta? </v-btn>
+        </a>
       </div>
     </v-form>
   </v-sheet>

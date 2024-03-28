@@ -9,24 +9,24 @@ onMounted(() => {
   <v-app-bar
     scroll-behavior="elevate"
     color="primary"
-    class="backdrop-blur-sm  !border-b-2 md:!z-[1000]"
+    class="backdrop-blur-sm !border-b-2 md:!z-[1000]"
   >
     <nav class="nav-bar max-w-[1400px] mx-auto px-5">
       <div class="flex items-center gap-5">
         <h4 class="mb-0 !font-extrabold">
           <NuxtLink to="/"> {{ useRuntimeConfig().public.title }} </NuxtLink>
         </h4>
-        <TextSearch class="!hidden md:!block " />
+        <TextSearch class="!hidden lg:!block " />
       </div>
 
       <div class="buttons-actions">
-        <div class="hidden md:!flex gap-5 mt-1 items-center mr-1">
+        <div class="hidden xl:!flex gap-5 mt-1 items-center mr-1">
           <NuxtLink class="text-secondary opacity-90 font-semibold" href="/"
             >Inicio</NuxtLink
           >
           <MenusMenuCategorias />
         </div>
-        <ButtonSearch class="md:!hidden" />
+        <ButtonSearch class="lg:!hidden" />
         <ButtonIconShoppingCart />
         <ButtonSignIn />
         <ButtonSignUp />
